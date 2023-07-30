@@ -1,0 +1,17 @@
+website is clean, not too much color and stuff on it. Straight to the point.
+
+
+header is gonna consist of a logo and title for the todo list.
+
+theres gonna be two sides of the website.
+
+1. 
+The first side is to the left and its going to consist of the projects. The projects side
+is going to have a small header and all the projects that have been created in there. Probably going to use classes or constructors.
+
+2. 
+The main side that stretches to the rest of the website is going to be a todo list. Theres going to be an example task with an edit, delete, priority and
+status buttons. The tasks name is going to be all the way to the left of the card and the notes will appear in the middle. This is done with functions to all of the 
+respective buttons. 
+In the header of the main part is going to be a plus icon all the way to the right. Theres gonna be a popup modal that will ask for information about the task.
+Its going to be done as before with classes/constructors and some functions.
