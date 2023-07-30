@@ -16,8 +16,10 @@ body {
     background-color: var(--cream);
 }
 
-header {
-    min-height: 15vh;
+/*HEADER*/
+
+#content > header {
+    height: 20vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--dark-navy);
@@ -26,11 +28,28 @@ header {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
-header img {
+#content > header img {
     max-height: 15vh;
 }
 
-header h1 {
+#content > header h1 {
     font-size: 5em;
     color: var(--cream);
+}
+
+/*MAIN*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 80vh;
+}
+
+aside {
+    background-color: aqua;
+}
+
+.tasks {
+    border: 1px solid red;
+    background-color: black;
 }
