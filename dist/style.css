@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Comfotaa;
+    src: url("/assets/Comfortaa-VariableFont_wght.ttf");
+}
+
+body {
+    margin: 0px;
+    font-family: Comfotaa;
+}
+
+header {
+    border: 1px solid blue;
+    min-height: 15vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: grey;
+    justify-items: center;
+    align-items: center;
+}
+
+header img {
+    max-height: 15vh;
+}
+
+header h1 {
+    font-size: 5em;
+    color: white;
+}
