@@ -94,6 +94,17 @@ aside ul {
     list-style-type: lower-latin;
 }
 
-.tasks {
-    
+#tasks header {
+    font-size: 3em;
+    margin: 0.3em;
+    text-align: center;
+}
+
+.task {
+    border: 3px solid var(--dark-black);
+    margin: 1em;
+    height: 3em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
 }
