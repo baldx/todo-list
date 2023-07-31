@@ -46,10 +46,54 @@ main {
 }
 
 aside {
-    background-color: aqua;
+    font-size: 1.3em;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+aside header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+aside header h2 {
+    justify-self: end;
+}
+
+aside header button {
+    box-sizing: border-box;
+    background: transparent;
+    border: 2px solid var(--dark-black);
+    border-radius: 5px;
+    font-size: 2em;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside header button:active {
+    background-color: var(--light-navy);
+    transition: 100ms;
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    width: 16em;
+}
+
+aside ul {
+    line-height: 2em;
+    font-weight: 700;
+    list-style-type: lower-latin;
 }
 
 .tasks {
-    border: 1px solid red;
-    background-color: black;
+    
 }
