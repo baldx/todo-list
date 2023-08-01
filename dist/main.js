@@ -1,0 +1,1 @@
+(()=>{"use strict";const t=document.querySelector(".add"),e=new class{constructor(t){this.title=t}};e.title="Jimmy",console.log(e.title),t.addEventListener("click",(()=>{console.log("test")}))})();
