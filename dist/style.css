@@ -88,7 +88,7 @@ aside ul li button {
     border-radius: 10px;
 }
 
-aside header button:active, #tasks header button:active, aside ul li button:active {
+aside header button:active, #tasks header button:active, aside ul li button:active, #modal button[type="submit"]:hover {
     background-color: var(--light-navy);
     transition: 50ms;
 }
@@ -181,4 +181,44 @@ aside ul {
 
 .undone {
     background-color: red;
+}
+
+/*MODAL*/
+
+#modal {
+    margin: 20px;
+    padding: 1em;
+    height: 250px;
+    width: 500px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(37, 37, 43) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+
+#modal > input {
+    border: 2px solid var(--dark-black);
+    outline: none;
+    padding: 0.4em;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+#modal > label {
+    font-size: 1.5em;
+}
+
+.priority-group {
+    font-size: 1.1em;
+}
+
+#modal button[type="submit"] {
+    border: 2px solid var(--dark-black);
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding: 0.3em;
 }
