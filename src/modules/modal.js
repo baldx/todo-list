@@ -13,11 +13,11 @@ function popUpModal() {
 
     <fieldset class="priority-group">
         <legend>Priority:</legend>
-        <input type="radio" name="priority" id="high" required>
+        <input type="radio" name="priority" id="high" value="high" required>
         <label for="priority">High</label>
-        <input type="radio" name="priority" id="medium" required>
+        <input type="radio" name="priority" id="medium" value="medium" required>
         <label for="priority">Medium</label>
-        <input type="radio" name="priority" id="low" required>
+        <input type="radio" name="priority" id="low" value="low" required>
         <label for="priority">Low</label>
     </fieldset>
     
