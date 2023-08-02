@@ -185,6 +185,11 @@ aside ul {
 
 /*MODAL*/
 
+.popUp {
+    display: none;
+    transition: 100ms;
+}
+
 #modal {
     margin: 20px;
     padding: 1em;
@@ -198,6 +203,11 @@ aside ul {
     align-items: center;
     box-shadow: rgb(37, 37, 43) 0px 7px 29px 0px;
     border-radius: 5px;
+    position: absolute;
+    top: 30vh;
+    left: 35vw;
+    background-color: var(--cream);
+    display: grid;
 }
 
 #modal > input {
