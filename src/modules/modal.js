@@ -1,3 +1,21 @@
+let projectLibrary = [
+    {
+        title: "Construction of a robot" 
+    },
+    {
+        title: "Construction of a robot" 
+    },
+    {
+        title: "Construction of a robot" 
+    }
+]
+
+class project {
+    constructor(title) {
+        this.title = title;
+    }
+}
+
 function popUpModal() {
     const container = document.querySelector(".popUp");
 
@@ -24,8 +42,25 @@ function popUpModal() {
     <button type="submit" class="submit">Add Project</button>
     
 </form>`
-
 container.style.display = "block";
+
+const submitBtn = document.querySelector(".submit");
+
+submitBtn.addEventListener("click", element => {
+    addProjectToList();
+    element.preventDefault();
+})
+
+function addProjectToList() {
+    container.style.display = "none";
+    let newProject = new project(title.value)
+    project.push(newProject);
+}
+
+function createProject() {
+
+}
+
 };
 
 export default popUpModal;
