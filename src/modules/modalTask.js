@@ -1,12 +1,6 @@
 let projectLibrary = [
     {
         title: "Construction of a robot" 
-    },
-    {
-        title: "Construction of a robot" 
-    },
-    {
-        title: "Construction of a robot" 
     }
 ]
 
@@ -16,8 +10,8 @@ class project {
     }
 }
 
-function popUpModal() {
-    const container = document.querySelector(".popUp");
+function popUpModalTask() {
+    const container = document.querySelector(".popUpTask");
 
     container.innerHTML += `<form id="modal">
     <label for="task">Task:</label>
@@ -54,13 +48,24 @@ submitBtn.addEventListener("click", element => {
 function addProjectToList() {
     container.style.display = "none";
     let newProject = new project(title.value)
-    project.push(newProject);
+    projectLibrary.push(newProject);
+    createProject();
 }
 
-function createProject() {
+function createProject(item) {
+    const projectList = document.createElement("li")
+    const projectButton = document.createElement("button")
+    const list = document.querySelector("ul");
 
+    list.appendChild(projectList);
+    projectList.classList.add("project");
+
+    projectList.appendChild(projectButton);
+    projectButton.innerText = item.title;
 }
+
+/*write function that delete project*/
 
 };
 
-export default popUpModal;
+export default popUpModalTask;

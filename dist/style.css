@@ -185,7 +185,7 @@ aside ul {
 
 /*MODAL*/
 
-.popUp {
+.popUpTask {
     display: none;
     transition: 100ms;
 }
