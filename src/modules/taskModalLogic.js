@@ -19,10 +19,12 @@ let taskLibrary = [
 const taskInput = document.querySelector("#task");
 const descriptionInput = document.querySelector("#description");
 const dueDateInput = document.querySelector("#due");
+
 const container = document.querySelector(".popUpTask");
 const submitBtn = document.querySelector(".submit");
+const priorityBtn = document.querySelectorAll(".priority");
 
-const taskLogic = () => {
+let taskLogic = () => {
     submitBtn.addEventListener("click", element => {
         addTaskToLibrary();
         element.preventDefault();
@@ -35,6 +37,19 @@ function addTaskToLibrary() {
     taskLibrary.push(newTask);
     showTask();
     resetForm();
+    
+}
+
+
+
+const buttonLogic = () => {
+    priorityBtn.forEach(e => {
+        e.addEventListener("click", () => {
+            if (e.innerHTML == "H") e.classList.add("high");
+            else if (e.innerHTML == "M") e.classList.add("medium");
+            else if (e.innerHTML == "L") e.classList.add("low");
+        })
+    })    
 }
 
 function resetForm() {
@@ -47,6 +62,7 @@ function getPriorityValue() {
     if (document.querySelector("input[name='priority']:checked").value == "high") return "H";
     else if (document.querySelector("input[name='priority']:checked").value == "medium") return "M";
     else if (document.querySelector("input[name='priority']:checked").value == "low") return "L";
+    else return false
 
 }
 
