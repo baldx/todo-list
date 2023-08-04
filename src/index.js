@@ -2,6 +2,7 @@ import { add } from "date-fns";
 import projectModal from "./modules/projectModal";
 import taskModal from "./modules/taskModal";
 import logic from "./modules/projectModalLogic"
+import taskLogic from "./modules/taskModalLogic"
 
 const addProjectBtn = document.querySelector(".addProject");
 const addTaskBtn = document.querySelector(".addTask");
@@ -13,3 +14,4 @@ addProjectBtn.addEventListener("click", () => {
 addTaskBtn.addEventListener("click", () => {
     document.querySelector(".popUpTask").style.display = "block";
 })
+
