@@ -23,18 +23,18 @@ const priorityBtn = document.querySelectorAll(".priority");
 priorityBtn.forEach(e => {
     e.addEventListener("click", () => {
         if (e.innerHTML == "High") {
-            e.classList.remove("high");
-            e.classList.add("low");
+            e.classList.remove("High");
+            e.classList.add("Low");
             e.innerHTML = "Low";
         }
         else if (e.innerHTML == "Low") {
-            e.classList.remove("low");
-            e.classList.add("medium");
+            e.classList.remove("Low");
+            e.classList.add("Medium");
             e.innerHTML = "Medium";
         }
         else if ( e.innerHTML == "Medium") {
-            e.classList.remove("medium")
-            e.classList.add("high");
+            e.classList.remove("Medium")
+            e.classList.add("High");
             e.innerHTML = "High"
         }
     })
@@ -45,8 +45,8 @@ const status = document.querySelectorAll(".check");
 status.forEach(e => {
     e.addEventListener("click", () => {
         if (e.innerHTML == "Done") {
-            e.classList.remove("done");
-            e.classList.add("unDone");
+            e.classList.remove("Done");
+            e.classList.add("UnDone");
             e.innerHTML = "Undone"
         }
         else if (e.innerHTML == "Undone") {
