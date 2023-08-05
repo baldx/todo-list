@@ -161,25 +161,25 @@ aside ul {
 
 /*PRIORITIES*/
 
-.high {
+.High {
     background-color: red;
 }
 
-.medium {
+.Medium {
     background-color: yellow;
 }
 
-.low {
+.Low {
     background-color: rgb(45, 204, 45);
 }
 
 /*STATUS*/
 
-.done {
+.Done {
     background-color: rgb(45, 204, 45);
 }
 
-.unDone {
+.UnDone {
     background-color: red;
 }
 
