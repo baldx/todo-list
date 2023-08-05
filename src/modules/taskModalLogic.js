@@ -12,7 +12,7 @@ let taskLibrary = [
         task: "Task",
         description: "Some interesting stuff",
         dueDate: "06/04/23",
-        priority: "high"
+        priority: "High"
     }
 ]
 
@@ -22,10 +22,10 @@ const dueDateInput = document.querySelector("#due");
 
 const container = document.querySelector(".popUpTask");
 const submitBtn = document.querySelector(".submit");
-const priorityBtn = document.querySelectorAll(".priority");
 
 let taskLogic = () => {
     submitBtn.addEventListener("click", element => {
+        rules()
         addTaskToLibrary();
         element.preventDefault();
     })
@@ -39,6 +39,14 @@ function addTaskToLibrary() {
     resetForm();
 }
 
+function rules() {
+    if (taskInput.value == null || dueDateInput.value == null || getPriorityValue() == null) {
+        alert("test");
+        resetForm()
+    }
+    else if (taskInput.value == "" || dueDateInput.value == "" || getPriorityValue() == "") alert("test")
+}
+
 function resetForm() {
     taskInput.value = "";
     descriptionInput.value = "";
@@ -49,8 +57,8 @@ function getPriorityValue() {
     if (document.querySelector("input[name='priority']:checked").value == "high") return "High";
     else if (document.querySelector("input[name='priority']:checked").value == "medium") return "Medium";
     else if (document.querySelector("input[name='priority']:checked").value == "low") return "Low";
-    else return false;
 }
+
 
 function showTask() {
     const container = document.querySelector("#tasks");
@@ -82,9 +90,9 @@ function showTask() {
     dueDateDiv.classList.add("due");
 
     task.appendChild(checkBtn);
-    /*checkBtn.innerHTML = function*/
+    checkBtn.innerHTML = "Undone"
     checkBtn.classList.add("check");
-
+    checkBtn.classList.add("UnDone")
 }
 
 export default taskLogic();
