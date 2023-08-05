@@ -22,7 +22,6 @@ const dueDateInput = document.querySelector("#due");
 
 const container = document.querySelector(".popUpTask");
 const submitBtn = document.querySelector(".submit");
-const priorityBtn = document.querySelectorAll(".priority");
 
 let taskLogic = () => {
     submitBtn.addEventListener("click", element => {
@@ -37,19 +36,6 @@ function addTaskToLibrary() {
     taskLibrary.push(newTask);
     showTask();
     resetForm();
-    
-}
-
-
-
-const buttonLogic = () => {
-    priorityBtn.forEach(e => {
-        e.addEventListener("click", () => {
-            if (e.innerHTML == "H") e.classList.add("high");
-            else if (e.innerHTML == "M") e.classList.add("medium");
-            else if (e.innerHTML == "L") e.classList.add("low");
-        })
-    })    
 }
 
 function resetForm() {
