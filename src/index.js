@@ -40,4 +40,19 @@ priorityBtn.forEach(e => {
     })
 });
 
-cibst 
+const status = document.querySelectorAll(".check");
+
+status.forEach(e => {
+    e.addEventListener("click", () => {
+        if (e.innerHTML == "Done") {
+            e.classList.remove("done");
+            e.classList.add("unDone");
+            e.innerHTML = "Undone"
+        }
+        else if (e.innerHTML == "Undone") {
+            e.classList.remove("unDone");
+            e.classList.add("done");
+            e.innerHTML = "Done";
+        }
+    })
+})
