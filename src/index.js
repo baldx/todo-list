@@ -50,8 +50,8 @@ status.forEach(e => {
             e.innerHTML = "Undone"
         }
         else if (e.innerHTML == "Undone") {
-            e.classList.remove("unDone");
-            e.classList.add("done");
+            e.classList.remove("UnDone");
+            e.classList.add("Done");
             e.innerHTML = "Done";
         }
     })
