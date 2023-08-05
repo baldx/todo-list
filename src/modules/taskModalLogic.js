@@ -54,15 +54,37 @@ function getPriorityValue() {
 
 function showTask() {
     const container = document.querySelector("#tasks");
+    const task = document.createElement("div");
+    const btnPriority = document.createElement("button");
+    const titleDiv = document.createElement("div");
+    const descriptionDiv = document.createElement("div");
+    const dueDateDiv = document.createElement("div");
+    const checkBtn = document.createElement("button");
 
-    container.innerHTML += `
-    <div class="task">
-        <button class="priority ${getPriorityValue()}">${getPriorityValue()}</button>
-        <div class="title">${taskInput.value}</div>
-        <div class="description">${descriptionInput.value}</div>
-        <div class="due">${dueDateInput.value}</div>
-        <button class="check UnDone">Undone</button>
-</div>`
+    container.appendChild(task);
+    task.classList.add("task");
+
+    task.appendChild(btnPriority);
+    btnPriority.classList.add("priority");
+    btnPriority.classList.add(getPriorityValue())
+    btnPriority.innerHTML = getPriorityValue();
+
+    task.appendChild(titleDiv);
+    titleDiv.innerHTML = taskInput.value;
+    titleDiv.classList.add("title");
+
+    task.appendChild(descriptionDiv);
+    descriptionDiv.innerHTML = descriptionInput.value;
+    descriptionDiv.classList.add("description");
+
+    task.appendChild(dueDateDiv);
+    dueDateDiv.innerHTML = dueDateInput.value;
+    dueDateDiv.classList.add("due");
+
+    task.appendChild(checkBtn);
+    /*checkBtn.innerHTML = function*/
+    checkBtn.classList.add("check");
+
 }
 
 export default taskLogic();
