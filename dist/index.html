@@ -22,7 +22,10 @@
                 </header>
                 <hr>
                 <ul>
-                    <li><button>Construction of a robot</button></li>
+                    <li>
+                        <button>Construction of a robot</button>
+                        <button class="delete-project">-</button>
+                    </li>
                 </ul>
             </aside>
             
@@ -37,7 +40,11 @@
                     <div class="title">Task</div>
                     <div class="description">Some interesting stuff</div>
                     <div class="due">06/04/23</div>
-                    <button class="check Done">Done</button>
+                    <div class="wrapper">
+                        <label for="checkbox">Status:</label>
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                    </div>
+                    <button class="delete-task">Delete</button>
                 </div>
             </div>
     </div>
