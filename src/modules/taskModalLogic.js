@@ -25,7 +25,6 @@ const submitBtn = document.querySelector(".submit");
 
 let taskLogic = () => {
     submitBtn.addEventListener("click", element => {
-        rules()
         addTaskToLibrary();
         element.preventDefault();
     })
@@ -37,14 +36,6 @@ function addTaskToLibrary() {
     taskLibrary.push(newTask);
     showTask();
     resetForm();
-}
-
-function rules() {
-    if (taskInput.value == null || dueDateInput.value == null || getPriorityValue() == null) {
-        alert("test");
-        resetForm()
-    }
-    else if (taskInput.value == "" || dueDateInput.value == "" || getPriorityValue() == "") alert("test")
 }
 
 function resetForm() {
@@ -67,7 +58,9 @@ function showTask() {
     const titleDiv = document.createElement("div");
     const descriptionDiv = document.createElement("div");
     const dueDateDiv = document.createElement("div");
-    const checkBtn = document.createElement("button");
+    const checkStatusDiv = document.createElement("div");
+    const label = document.createElement("label");
+    const checkbox = document.createElement("input")
 
     container.appendChild(task);
     task.classList.add("task");
@@ -89,10 +82,17 @@ function showTask() {
     dueDateDiv.innerHTML = dueDateInput.value;
     dueDateDiv.classList.add("due");
 
-    task.appendChild(checkBtn);
-    checkBtn.innerHTML = "Undone"
-    checkBtn.classList.add("check");
-    checkBtn.classList.add("UnDone")
+    task.appendChild(checkStatusDiv);
+    checkStatusDiv.classList.add("wrapper");
+
+    checkStatusDiv.appendChild(label);
+    label.setAttribute("for", "checkbox");
+    label.innerHTML = "Status:"
+
+    checkStatusDiv.appendChild(checkbox);
+    checkbox.setAttribute("type", "checkbox")
+    checkbox.setAttribute("name", "checkbox")
+    checkbox.setAttribute("id", "checkbox")
 }
 
 export default taskLogic();
